@@ -55,7 +55,15 @@ const getAll = async (req, res) => {
 
 const getOneById = async (req, res) => {
 
-  const 
+  const idToGet = req.params.id
+
+  const getOneById = `
+  SELECT *
+  FROM books
+  WHERE id = $1;
+`;
+
+console.log(idToGet);
 
 }
 
